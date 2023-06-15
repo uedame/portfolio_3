@@ -1,0 +1,279 @@
+/* @charset 'utf-8'; */
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+/********************
+全ページ共通
+*********************/
+:root{
+	--color_w:#fff;
+	--color_b:#000;
+	--color1:#472ccb;
+	--color2:#08badd;
+	--color3:#ff893a;
+	--color4:#a8a8a8;
+	--color5:#c2faff;
+	--color6:#5a5a5a;
+	--color7:#00eaff;
+	--color8:#e8e8e8;
+	--color9:#cacaca;
+	--color_p1:#8aff41;
+	--color_p2:#ffab7d;
+	--color_p3:#FFD700;
+	--color_p4:#ffffff;
+
+}
+* {
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+header {
+	background: linear-gradient(10deg, var(--color1), var(--color2));
+	color: var(--color_w);
+	padding: 10px;
+	height: 100px;
+}
+nav ul {
+	margin-top: 8px;
+}
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+nav ul li a {
+	color: var(--color_w);
+	transition: all .3s;
+}
+nav ul li a:hover {
+	color: var(--color3);
+	text-decoration: none;
+	border-bottom: solid 1px var(--color3);
+}
+main {
+	padding: 20px;
+	min-height: calc(100vh - 160px);
+}
+h2{
+	margin-bottom: 20px;
+}
+p{
+	margin: 20px 0;
+}
+footer {
+	background: linear-gradient(10deg, var(--color1), var(--color2));
+	color: var(--color_w);
+	width: 100%;
+	text-align: center;
+	height: 60px ;
+	display: inline-block;
+	align-items: center;
+}
+footer p{
+	/* margin: auto 0; */
+}
+/********************
+ホームページ専用
+*********************/
+.home_img img{
+width: 40%;
+}
+
+/********************
+aboutページ専用
+*********************/
+.about_main{
+	display: flex;
+}
+.about_left {
+/* margin-right: 40px; */
+	width: 60%;
+}
+.about_left dl{
+	display: flex;
+	flex-wrap: wrap;
+	/* width: 100%; */
+	border: 1px solid var(--color8);
+}
+.about_left dt{
+	width: 25%;
+	border: 1px solid var(--color8);
+	padding: 10px;
+	background-color: var(--color9);
+	/* color: var(--color_w); */
+}
+.about_left dd{
+	width: 75%;
+	border: 1px solid var(--color8);
+	padding: 10px;
+}
+.about_right {
+	margin-top: 80px;
+	width: 40%;
+	text-align: center;
+	/* border: 1px solid var(--color8); */
+}
+/********************
+contactページ専用
+*********************/
+form label {
+	display: inline-block;
+	width: 200px;
+}
+form input,
+form textarea {
+	margin-bottom: 20px;
+	padding: 5px;
+	width: 400px;
+}
+form textarea {
+	height: 100px;
+	width: 400px;
+}
+.submit_btn{
+	width: 40px;
+}
+/********************
+servicesページ専用
+*********************/
+.services_main ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.services_main ul li{
+	width: 30%;
+	position: relative;
+}
+.card{
+	/* width: 100%; */
+	text-align: center;
+	border: 1px solid var(--color4);
+	opacity: 0.8;
+	border-radius: 8px;
+	transition: all .4s;
+}
+.standard{
+	background: linear-gradient(10deg, var(--color_p1)80%,var(--color_p4)) ;
+}
+.next{
+	background: linear-gradient(10deg, var(--color_p2)80% , var(--color_p4) );
+	}
+.premium{
+	background: linear-gradient(10deg, var(--color_p3)80% , var(--color_p4) );
+}
+.card:hover{
+	opacity: 1;
+}
+.card h3{
+	margin: 20px;
+}
+.new::before{
+	content: "NEW";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	padding: 4px 20px;
+	border-radius: 4px;
+	color: var(--color_w);
+	background-color: #2b1ebd;
+}
+.plan{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px;
+}
+.price{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 20px;
+	color: var(--color6);
+}
+.explanation{
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+	color: var(--color6);
+	min-height: 280px;
+}
+.card button{
+	margin: 20px;
+	background-color: #fff;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	transition: all .3s;
+}
+.card button:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+/********************
+QAページ専用
+*********************/
+.qa-1 {
+	max-width: 70%;
+	margin-bottom: 5px;
+	border-bottom: 2px solid #d6dde3;
+}
+.qa-1 summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 1em 2em 1em 3em;
+	color: #333333;
+	font-weight: 600;
+	cursor: pointer;
+}
+.qa-1 summary::before,
+.qa-1 p::before {
+	position: absolute;
+	left: 1em;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+.qa-1 summary::before {
+	color: #75bbff;
+	content: "Q";
+}
+.qa-1 summary::after {
+	transform: translateY(-25%) rotate(45deg);
+	width: 7px;
+	height: 7px;
+	margin-left: 10px;
+	border-bottom: 3px solid #333333b3;
+	border-right: 3px solid #333333b3;
+	content: '';
+	transition: transform .5s;
+}
+.qa-1[open] summary::after {
+	transform: rotate(225deg);
+}
+.qa-1 p {
+	position: relative;
+	transform: translateY(-10px);
+	opacity: 0;
+	margin: 0;
+	padding: .3em 3em 1.5em;
+	color: #333;
+	transition: transform .5s, opacity .5s;
+}
+.qa-1[open] p {
+	transform: none;
+	opacity: 1;
+}
+.qa-1 p::before {
+	color: #ff8d8d;
+	line-height: 1.2;
+	content: "A";
+}
+/********************
+sp対応
+*********************/
